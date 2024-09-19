@@ -1,0 +1,11 @@
+services:
+  backend:
+    image: backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    restart: always
+    volumes:
+      - ./backend:/code
+    ports:
+      - "8005:8005"
