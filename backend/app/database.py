@@ -1,10 +1,10 @@
-from app import settings
+from.settings import DATABASE_URL
 from sqlmodel import create_engine, Session, SQLModel
 from .models import StoreSales
 
 # only needed for psycopg 3 - replace postgresql
 # with postgresql+psycopg in settings.DATABASE_URL
-connection_string = str(settings.DATABASE_URL).replace(
+connection_string = str(DATABASE_URL).replace(
     "postgresql", "postgresql+psycopg"
 )
 
